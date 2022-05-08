@@ -1,14 +1,11 @@
-//
-//  main.cpp
-//  overload
-//
-//  Created by 孙永杰 on 2022/5/5.
-//
-
-#include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+#include "Screen.h"
+// const non_const member function overload
+// const 非const 重载成员函数
+int main()
+{
+    Screen myScreen(2, 3, "123456789");
+    myScreen.display(cout);
+    const Screen myScreen2(2, 3, "123456789");
+    myScreen2.display(cout);
+    myScreen.max();
 }
